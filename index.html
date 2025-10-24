@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Freightline Inc. - SOP for AD, ESXi & Datto Maintenance</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #1f2937;
+      font-family: 'Inter', sans-serif;
+    }
+    .brand-orange {
+      color: #f97316;
+    }
+    .brand-bg {
+      background-color: #f97316;
+    }
+    .brand-border {
+      border-color: #f97316;
+    }
+
+    .logo {
+      background-color: #ececec;
+      border-radius: 20%;
+    }
+  </style>
+</head>
+<body>
+  <header class="brand-bg text-white py-6 shadow-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6">
+      <div class="flex items-center space-x-4">
+        <img src="/images/logonew.png" alt="Galaxy Freightline Logo" class="h-24 w-auto logo">
+        <div>
+          <h1 class="text-2xl font-bold">Galaxy Freightline Inc.</h1>
+          <p class="text-sm text-orange-100">IT Infrastructure Department</p>
+        </div>
+      </div>
+      <div class="text-sm">
+        <p><strong>Document:</strong> SOP – AD Server, ESXi & Datto Backup</p>
+        <p><strong>Date:</strong> October 2025</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-8">
+    <section class="mb-10 text-center">
+      <h2 class="text-3xl font-bold brand-orange mb-2">Standard Operating Procedure (SOP)</h2>
+      <p class="text-lg font-semibold">Maintenance of AD Server, VMware ESXi & Datto Backup System</p>
+      <p class="text-gray-500 mt-1">Prepared by: <strong>IT Team</strong> - Galaxy Freightline Inc. | Version 1.0</p>
+    </section>
+
+    <!-- Purpose -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">1. Purpose</h3>
+      <p class="mt-2">To provide a standardized and safe procedure for rebooting and maintaining servers, including VMware ESXi hosts and Datto backup appliances, ensuring system stability, data integrity, and minimal downtime.</p>
+    </section>
+
+    <!-- Scope -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">2. Scope</h3>
+      <!-- <p class="mt-2">Applicable to all IT staff responsible for maintaining:</p> -->
+      <ul class="list-disc pl-6 mt-2">
+        <li>Physical servers</li>
+        <li>VMware ESXi Virtualization Platform</li>
+        <li>Datto Onsite & Cloud Backup Systems</li>
+      </ul>
+    </section>
+
+     <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">3. Responsibilities</h3>
+      <p class="mt-2">Applicable to all IT staff responsible for maintaining:</p>
+      <ul class="list-disc pl-6 mt-2">
+        <li>Perform scheduled maintenance, monitor logs, verify system backups.</li>
+        <li>Perform reboot/maintenance tasks, apply patches, verify system functionality</li>
+       <li>Validate application/service availability post-maintenance</li> 
+        <li>Datto Onsite & Cloud Backup Systems</li>
+      </ul>
+    </section>
+
+    <!-- Responsibilities -->
+    <!-- <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">3. Responsibilities</h3>
+      <table class="min-w-full border border-gray-300 mt-3 text-sm">
+        <thead class="bg-orange-100">
+          <tr>
+            <th class="border p-2 text-left">Role</th>
+            <th class="border p-2 text-left">Responsibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border p-2">IT Network Engineer</td><td class="border p-2">Perform scheduled maintenance, monitor logs, verify system backups.</td></tr>
+          <tr><td class="border p-2">IT Manager</td><td class="border p-2">Approve maintenance windows, review performance reports, and handle escalations.</td></tr>
+          <tr><td class="border p-2">Backup Administrator</td><td class="border p-2">Monitor backup health and conduct restore testing.</td></tr>
+        </tbody>
+      </table>
+    </section> -->
+
+    <!-- Schedule -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">4. Maintenance Schedule Overview</h3>
+      <table class="min-w-full border border-gray-300 mt-3 text-sm">
+        <thead class="bg-orange-100">
+          <tr>
+            <th class="border p-2">System</th>
+            <th class="border p-2">Daily</th>
+            <th class="border p-2">Weekly</th>
+            <th class="border p-2">Monthly</th>
+            <th class="border p-2">Quarterly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-2 font-medium">Active Directory</td>
+            <td class="border p-2">Check replication, logs</td>
+            <td class="border p-2">Verify GPOs, DNS</td>
+            <td class="border p-2">Windows updates</td>
+            <td class="border p-2">Test restore</td>
+          </tr>
+          <tr>
+            <td class="border p-2 font-medium">VMware ESXi</td>
+            <td class="border p-2">Check host health</td>
+            <td class="border p-2">Snapshot cleanup</td>
+            <td class="border p-2">Firmware updates</td>
+            <td class="border p-2">Patch review</td>
+          </tr>
+          <tr>
+            <td class="border p-2 font-medium">Datto Backup</td>
+            <td class="border p-2">Verify backup success</td>
+            <td class="border p-2">Review alerts</td>
+            <td class="border p-2">Test restore</td>
+            <td class="border p-2">Firmware update</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Procedures -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">5. Procedures</h3>
+
+      <h4 class="text-lg font-semibold mt-4 text-gray-700">5.1 Active Directory Server</h4>
+      <ul class="list-disc pl-6 mt-2">
+        <li><strong>Daily:</strong> Check Event Viewer, replication (<code>repadmin /replsummary</code>), DNS.</li>
+        <li><strong>Weekly:</strong> Review GPOs, time sync, SYSVOL sharing.</li>
+        <li><strong>Monthly:</strong> Apply Windows updates, run <code>dcdiag</code>, backup System State.</li>
+        <li><strong>Quarterly:</strong> Test restore, audit user/group permissions.</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mt-4 text-gray-700">5.2 VMware ESXi Host</h4>
+      <ul class="list-disc pl-6 mt-2">
+        <li><strong>Daily:</strong> Check host health, VM uptime.</li>
+        <li><strong>Weekly:</strong> Clear snapshots, verify datastore space.</li>
+        <li><strong>Monthly:</strong> Update VMware Tools, patch ESXi.</li>
+        <li><strong>Quarterly:</strong> Validate vCenter compatibility, test restore.</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mt-4 text-gray-700">5.3 Datto Backup</h4>
+      <ul class="list-disc pl-6 mt-2">
+        <li><strong>Daily:</strong> Confirm successful backup jobs.</li>
+        <li><strong>Weekly:</strong> Check alerts, perform file restore test.</li>
+        <li><strong>Monthly:</strong> Update agents, conduct full restore test.</li>
+        <li><strong>Quarterly:</strong> Apply firmware updates, review retention policies.</li>
+      </ul>
+    </section>
+
+    <!-- Reporting -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">6. Reporting & Documentation</h3>
+      <ul class="list-disc pl-6 mt-2">
+        <li>Maintain a maintenance log for each task completed.</li>
+        <li>Submit monthly reports.</li>
+        <li>Log all incidents and resolutions in the helpdesk system.</li>
+      </ul>
+    </section>
+
+    <!-- Escalation -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">7. Contingency & Escalation</h3>
+      <table class="min-w-full border border-gray-300 mt-3 text-sm">
+        <thead class="bg-orange-100">
+          <tr>
+            <th class="border p-2">Issue</th>
+            <th class="border p-2">Action</th>
+            <th class="border p-2">Escalation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border p-2">AD replication failure</td><td class="border p-2">Run diagnostics, check DNS</td><td class="border p-2">Domain Admin</td></tr>
+          <tr><td class="border p-2">ESXi host unresponsive</td><td class="border p-2">Restart via vCenter</td><td class="border p-2">Infrastructure Lead</td></tr>
+          <tr><td class="border p-2">Backup job failed</td><td class="border p-2">Retry and check Datto agent</td><td class="border p-2">Datto Support</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- References -->
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold brand-orange">8. References</h3>
+      <ul class="list-disc pl-6 mt-2">
+        <li>Microsoft AD Best Practices Guide</li>
+        <li>VMware vSphere Documentation</li>
+        <li>Datto Partner Portal — Admin Manual</li>
+      </ul>
+    </section>
+
+    <!-- Revision -->
+    <section>
+      <h3 class="text-xl font-semibold brand-orange">9. Revision History</h3>
+      <table class="min-w-full border border-gray-300 mt-3 text-sm">
+        <thead class="bg-orange-100">
+          <tr>
+            <th class="border p-2">Version</th>
+            <th class="border p-2">Date</th>
+            <th class="border p-2">Changes</th>
+            <th class="border p-2">Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-2">1.0</td>
+            <td class="border p-2">Oct 2025</td>
+            <td class="border p-2">Initial SOP Creation</td>
+            <td class="border p-2">IT Team</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="brand-bg text-white text-center py-4 mt-12 text-sm">
+    © 2025 Galaxy Freightline Inc. — IT Infrastructure Department
+  </footer>
+</body>
+</html>
